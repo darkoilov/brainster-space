@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Darko Ilov" />
+  <meta name="description" content="Homepage" />
+  <meta name="keywords" content="programiranje, dizajn, marketing, data science" />
+  <title>Brainster</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand active" id="logo" href="index.html"><img src="assets/images/brainster_space_logo.svg"
+        alt="" /></a>
+    <ul class="navbar-nav navButton1">
+      <li class="nav-item">
+        <button type="button" class="btn btn-outline-warning right navBtn navButton" id="navBtn1">
+          <i class="fas fa-plus"></i>ПРИКЛУЧИ СЕ
+        </button>
+      </li>
+    </ul>
+    <button class="navbar-toggler navbarTogglerFilter collapsed" id="navbarTogglerFilter">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </button>
+    <button class="navbar-toggler" id="navToggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" id="navActive">
+        <li class="nav-item btnsActive" id="spaceBlogNavBtn">
+          <a class="nav-link" href="#spaceBlog">SPACE БЛОГ</a>
+        </li>
+        <li class="nav-item btnsActive" id="eventsNavBtn">
+          <a class="nav-link" href="#events">НАСТАНИ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">CO-WORKING</a>
+        </li>
+        <li class="nav-item btnsActive" id="academyNavBtn">
+          <a class="nav-link" href="#academy">АКАДЕМИИ</a>
+        </li>
+        <li class="nav-item btnsActive" id="spaceEventNavBtn">
+          <a class="nav-link" href="#spaceEvent">ПРОСТОР ЗА НАСТАНИ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">ПАРТНЕРСТВА</a>
+        </li>
+        <ul class="navbar-nav navButton2">
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-warning right navBtn navButton" id="navBtn2">
+              <i class="fas fa-plus"></i>ПРИКЛУЧИ СЕ
+            </button>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="homepageSection">
+    <div class="cover">
+      <h1>Центар за Учење, Кариера и Иновација</h1>
+      <img src="assets/images/sl1.png" alt="">
+    </div>
+
+    <div class="container-fluid cards">
+      <h1>За Нас</h1>
+      <div class="row" id="list">
+      </div>
+    </div>
+
+    <div class="container-fluid blok">
+      <div class="row" id="education">
+      </div>
+    </div>
+    <div class="container-fluid cards">
+      <h1>Настани</h1>
+      <div class="row" id="nastani">
+      </div>
+      <div class="nastaniBtn"></div>
+    </div>
+
+    <div class="container-fluid blok">
+      <div class="row" id="coworking">
+      </div>
+    </div>
+
+    <div class="container-fluid blok">
+      <div class="row" id="spaceEvent">
+      </div>
+    </div>
+
+    <div class="partners blok">
+      <h1>Партнери</h1>
+      <p>Имаш идеја? Отворени сме за соработка</p>
+    </div>
+  </section>
+  <section id="spaceBlogSection">
+    <div class="container-fluid filter">
+      <div id="filterBtns">
+        <a type="button" class="btn bold filtrirajBtn">ФИЛТРИРАЈ</a>
+        <a type="button" class="btn filterBtn active" onclick="filterSelection('all')">СИТЕ</a>
+        <a type="button" class="btn filterBtn" onclick="filterSelection('kariera')">КАРИЕРА</a>
+        <a type="button" class="btn filterBtn" onclick="filterSelection('tehnologija')">ТЕХНОЛОГИЈА</a>
+        <a type="button" class="btn filterBtn" onclick="filterSelection('datescience')">DATA SCIENCE</a>
+        <a type="button" class="btn filterBtn" onclick="filterSelection('marketing')">МАРКЕТИНГ</a>
+        <a type="button" class="btn filterBtn" onclick="filterSelection('dizajn')">ДИЗАЈН</a>
+        <a type="button" class="btn filterBtn" onclick="filterSelection('impact')">IMPACT</a>
+        <a type="button" class="btn filterBtn spaceFamily" href="https://medium.com/wearelaika/brainster-space-the-new-home-of-the-local-tech-community-in-skopje-ffe97b564152">#SpaceFamily</a>
+      </div>
+    </div>
+
+    <div id="demo" class="carousel slide" data-ride="carousel" data-interval="7000">
+      <div class="carousel-inner"></div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <i class="far fa-arrow-alt-circle-left"></i>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <i class="far fa-arrow-alt-circle-right"></i>
+      </a>
+    </div>
+
+    <div class="container-fluid cards">
+      <div class="row" id="listSpaceBlog"></div>
+    </div>
+  </section>
+  <section id="eventsSection">
+    <div class="container-fluid">
+      <div id="calendar">
+        <div class="calendar-controls">
+          <h1>Календар</h1>
+          <div class="control">
+            <a href="#" type="button" id="calendarPrevBtn" class="calendarBtn"><i class="fas fa-arrow-left"></i></a>
+
+            <h5 id="montyAndYear">Mart 2020</h5>
+            <a href="#" type="button" id="calendarNextBtn" class="calendarBtn"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="calendar-header">
+          <div class="header-cell">Нед</div>
+          <div class="header-cell">Пон</div>
+          <div class="header-cell">Вто</div>
+          <div class="header-cell">Сре</div>
+          <div class="header-cell">Чет</div>
+          <div class="header-cell">Пет</div>
+          <div class="header-cell">Саб</div>
+        </div>
+
+        <div id="calendar-body"></div>
+      </div>
+    </div>
+
+    <div class="extraTabletEvents">
+      <h3>Следни Настани</h3>
+      <div class="row nextEvent margin0"></div>
+    </div>
+  </section>
+  <section id="academySection">
+    <div class="container-fluid blok">
+      <div class="row" id="academy"></div>
+    </div>
+
+    <div class="container-fluid blok">
+      <div class="row" id="academyCard"></div>
+    </div>
+  </section>
+  <section id="spaceEventSection">
+    <div class="container-fluid blok">
+      <div class="row" id="spaceEventPage2"></div>
+    </div>
+
+    <div class="container-fluid blok">
+      <div class="row" id="ourSpaces">
+        <div class="col-lg-3 col-sm-12 selfCenter ourSpacesLeft"></div>
+        <div class="col-lg-9">
+          <div class="row" id="addAblumImg"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid blok">
+      <div class="row" id="spaceKitchen"></div>
+    </div>
+
+    <div class="container-fluid blok offerContainer">
+      <h1>Нудиме</h1>
+      <div id="offer">
+        <a href="#" class="btn btns academyBtn"><i class="fas fa-globe-europe"></i><span>Простор</span></a>
+        <a href="#" class="btn btns academyBtn"><i class="fas fa-mug-hot"></i><span>Space Kitchen</span></a>
+        <a href="#" class="btn btns academyBtn"><i class="fas fa-globe"></i><span>Логистика</span></a>
+        <a href="#" class="btn btns academyBtn"><i class="fas fa-microphone-alt"></i><span>Техничка Поддршка</span></a>
+        <a href="#" class="btn btns academyBtn"><i class="fas fa-volume-up"></i><span>Звук</span></a>
+        <a href="#" class="btn btns academyBtn"><i class="far fa-lightbulb"></i><span>Светло</span></a>
+        <a href="#" class="btn btns academyBtn"><i class="fas fa-cubes"></i><span>Помош при Организација</span></a>
+        <a href="#" class="btn btns academyBtn"><i class="fas fa-camera-retro"></i><span>Видео и Фотографија</span></a>
+        <a href="#" class="btn btns academyBtn"><i class="fab fa-facebook"></i><span>Промоција на Социјални
+            Мрежи</span></a>
+      </div>
+    </div>
+
+    <div class="container-fluid blok" id="spaceEvent/eventHostContact">
+      <div class="row eventHost"></div>
+    </div>
+  </section>
+
+  <footer class="footer"></footer>
+
+  <div id="myModal" class="modal modalbg">
+    <div class="modal-content modalContent">
+      <div class="modal-header">
+        <h2>BrainsterSpace</h2>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Име</label>
+            <input type="text" class="form-control" id="usrname" placeholder="Внесете го вашето име">
+          </div>
+          <div class="form-group">
+            <label for="usrlastname"><span class="glyphicon glyphicon-user"></span> Презиме</label>
+            <input type="text" class="form-control" id="usrlastname" placeholder="Внесете го вашето презиме">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail">Емаил Адреса</label>
+            <input type="email" required class="form-control italic" id="exampleInputEmail"
+              placeholder="Внесете ја вашата Емаил Адреса" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left right closeBtn">Исклучи</button>
+        <button type="submit" class="btn btn-outline-warning right navBtn"><i class="fas fa-plus"></i>ПРИКЛУЧИ
+          СЕ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="myModal2" class="modal modalbg ">
+    <div class="modal-content modalContent">
+      <div class="modal-header">
+        <h2>Приклучи се</h2>
+        <span class="close partnersClose">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="usrname" class="labelName"><span class="glyphicon glyphicon-user"></span> Име и Презиме
+              (задолжително)</label>
+            <div class="invalid-feedback feedbackName">
+              Внесете Име и Презиме
+            </div>
+            <input type="text" name="usrname" required class="form-control" id="usrname2"
+              placeholder="Внесете Име и Презиме">
+          </div>
+          <div class="form-group">
+            <label for="usrlastname"><span class="glyphicon glyphicon-user"></span>Име на Компанијата
+              (незадолжително)</label>
+            <input type="text" class="form-control" id="usrlastname2" placeholder="Внесете име на Вашата Компанија">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputNumber" class="labelNumber">Телефонски Број (задолжително)</label>
+            <div class="invalid-feedback feedbackNumber">
+              Внесете Телефонски Број
+            </div>
+            <input type="number" name="mobile" autofocus required class="form-control italic" id="number2"
+              placeholder="Внесете Телефонски Број" />
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="width100">Предлог за Соработка (незадолжително)<span
+                class="areakey">300</span></label>
+            <textarea class="form-control" id="Textarea2" rows="3" maxlength="300"
+              placeholder="Во 300 карактери, опишете зошто сакате да соработуваме "></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left right closeBtn"
+          id="partnersCloseBtn">ИСКЛУЧИ</button>
+        <button type="submit" class="btn btn-outline-warning right navBtn" id="partnersSubmitBtn"><i
+            class="fas fa-arrow-right"></i>ИСПРАТИ ФОРМА</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="myModal3" class="modal modalbg">
+    <div class="modal-content modalContent invModalContent">
+      <div class="modal-header">
+        <h2>Приклучи се</h2>
+        <span class="close partnersClose2">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Име и Презиме</label>
+            <input type="text" name="name" autofocus required class="form-control" id="usrname3"
+              placeholder="Внесете Име и Презиме">
+            <div class="invalid-feedback feedback">
+              задолжително
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="usrlastname"><span class="glyphicon glyphicon-user"></span>Име на Компанијата
+            </label>
+            <input type="text" autofocus required class="form-control" id="usrlastname3"
+              placeholder="Внесете име на Вашата Компанија">
+            <div class="invalid-feedback feedback">
+              задолжително
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputNumber">Емаил Адреса</label>
+            <input type="email" name="email" autofocus required class="form-control italic" id="email3"
+              placeholder="Внесете Емаил Адреса" />
+            <div class="invalid-feedback feedback">
+              задолжително
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputNumber">Телефонски Број (задолжително)</label>
+            <input type="number" name="mobile" autofocus required class="form-control italic" id="Number3"
+              placeholder="Внесете Телефонски Број" />
+            <div class="invalid-feedback feedback">
+              задолжително
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="width100">Потреби на компанијата<span
+                class="areakey">300</span></label>
+            <textarea class="form-control" id="Textarea3" rows="3" maxlength="300"
+              placeholder="Во 300 карактери, опишете зошто сакате да соработуваме "></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left right closeBtn"
+          id="partnersCloseBtn2">ИСКЛУЧИ</button>
+        <button type="submit" class="btn btn-outline-warning right navBtn" id="partnersSubmitBtn"><i
+            class="fas fa-arrow-right"></i>ИСПРАТИ ФОРМА</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
