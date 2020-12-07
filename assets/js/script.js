@@ -623,7 +623,7 @@ $('#calendarPrevBtn').click(function (e) {
 
 const eventsData = [
   {
-    date: new Date(2020, 3, 4),
+    date: new Date(2020, 11, 4),
     title: 'Deep dive into Data Science',
     time: '10:00 - 18:00ч',
     day: 'Ден 1',
@@ -631,7 +631,7 @@ const eventsData = [
     color: 'white'
   },
   {
-    date: new Date(2020, 3, 5),
+    date: new Date(2020, 11, 5),
     title: 'Deep dive into Data Science',
     time: '10:00 - 18:00ч',
     day: 'Ден 2',
@@ -639,7 +639,7 @@ const eventsData = [
     color: 'white'
   },
   {
-    date: new Date(2020, 3, 25),
+    date: new Date(2020, 11, 25),
     title: 'Deep Dive into Marketing',
     time: '10:00 - 18:00ч',
     day: 'Ден 1',
@@ -647,7 +647,7 @@ const eventsData = [
     color: 'white'
   },
   {
-    date: new Date(2020, 3, 26),
+    date: new Date(2020, 11, 26),
     title: 'Deep Dive into Marketing',
     time: '10:00 - 18:00ч',
     day: 'Ден 2',
